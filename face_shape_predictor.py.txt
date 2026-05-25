@@ -1,0 +1,9 @@
+from utils.face_landmarks import extract_landmarks
+
+def predict_face_shape(image_path):
+    landmarks = extract_landmarks(image_path)
+    if landmarks is None:
+        return "Unknown"
+
+    # Simple demo logic
+    return "Oval"

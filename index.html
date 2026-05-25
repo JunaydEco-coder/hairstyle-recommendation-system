@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hairstyle Recommendation</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<h2>Hairstyle Recommendation System</h2>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" required>
+    <button type="submit">Predict</button>
+</form>
+
+{% if result %}
+<h3>Face Shape: {{ result.face_shape }}</h3>
+<h3>Hair Type: {{ result.hair_type }}</h3>
+
+<ul>
+    {% for style in result.styles %}
+        <li>{{ style }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+</body>
+</html>
