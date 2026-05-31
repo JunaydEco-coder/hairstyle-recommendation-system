@@ -1,0 +1,18 @@
+# Web framework
+Flask==3.0.3
+Werkzeug==3.0.3
+
+# Image processing
+opencv-python==4.10.0.84
+Pillow==10.4.0
+
+# Numerics / data
+numpy==1.26.4
+pandas==2.2.2
+
+# Machine learning model
+tensorflow==2.16.1        # remove if the model is not a Keras/TF model
+scikit-learn==1.5.1       # remove if not using classical ML
+
+# Utilities
+gunicorn==22.0.0          # production WSGI server (optional, for deployment)
